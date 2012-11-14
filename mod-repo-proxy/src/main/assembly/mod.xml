@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+              http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd
+          ">
+
+	<id>mod</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<baseDirectory></baseDirectory>
+
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>${module-directory}/lib</outputDirectory>
+			<excludes>
+				<exclude>${project.artifactId}-${project.version}.jar</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<fileSet>
+			<!-- empty outputDirectory puts mod.json at the root of the structure -->
+			<outputDirectory>${module-directory}</outputDirectory>
+			<directory>src/main/resources</directory>
+			<includes>
+				<include>mod.json</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<!-- empty outputDirectory puts mod.json at the root of the structure -->
+			<outputDirectory>${module-directory}</outputDirectory>
+			<directory>src/main/groovy</directory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>

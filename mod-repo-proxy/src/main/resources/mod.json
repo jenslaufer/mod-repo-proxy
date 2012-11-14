@@ -1,0 +1,4 @@
+{
+  "main": "Server.groovy",
+  "auto-redeploy": true
+}
