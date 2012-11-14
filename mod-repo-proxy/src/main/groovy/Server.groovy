@@ -7,7 +7,7 @@ def client = vertx.createHttpClient()
 def filesRoot = System.getProperty("user.home")+"/.vertx/server"
 def rm = new RouteMatcher()
 
-rm.put('/upload/:path/:modId') { req ->
+rm.put('/install/:path/:modId') { req ->
 	def path = "${filesRoot}/${req.params['path']}"
 	def filename = "${path}/${req.params['modId']}"
 

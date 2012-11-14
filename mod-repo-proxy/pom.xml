@@ -102,7 +102,7 @@
 							<fromDir>target</fromDir>
 							<includes>mod.zip</includes>
 							<url>http://localhost</url>
-							<toDir>/install/${project.groupId}.${project.artifactId}-v${project.version}</toDir>
+							<toDir>/install${project.groupId}.${project.artifactId}-v${project.version}</toDir>
 						</configuration>
 					</execution>
 				</executions>
