@@ -3,7 +3,7 @@ import org.vertx.groovy.core.http.RouteMatcher
 
 
 def client = vertx.createHttpClient()
-		.setPort(80).setHost("")
+		.setPort(80).setHost("vert-x.github.com")
 def filesRoot = System.getProperty("user.home")+"/.vertx/server"
 def rm = new RouteMatcher()
 
