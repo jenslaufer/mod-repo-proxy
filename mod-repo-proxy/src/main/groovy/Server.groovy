@@ -60,4 +60,4 @@ rm.noMatch{ req ->
 	req.response.end "${req.uri} not matched"
 }
 
-vertx.createHttpServer().requestHandler(rm.asClosure()).listen(80,"localhost")
+vertx.createHttpServer().requestHandler(rm.asClosure()).listen(9090,"localhost")
