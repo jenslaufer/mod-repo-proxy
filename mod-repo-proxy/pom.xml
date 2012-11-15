@@ -47,7 +47,7 @@
 				<artifactId>vertx-maven-plugin</artifactId>
 				<version>1.2.3.4</version>
 				<configuration>
-					<verticleName>App.groovy</verticleName>
+					<verticleName>Server.groovy</verticleName>
 					<classpath>${basedir}/src/main/groovy/;${basedir}/src/main/groovy/web</classpath>
 				</configuration>
 				<executions>
